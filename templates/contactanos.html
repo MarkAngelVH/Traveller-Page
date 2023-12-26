@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Traveller Contactanos</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='web/img/logo.png') }}" rel="icon">
+  <!-- Libraries & Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='web/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='web/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="titulo">
+                <h2>Travel Go</h2>
+            </div>
+
+            <div class="navegacion">
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('registrarForm') }}">Contactanos</a>
+                <a href="{{ url_for('blog') }}">Blog</a>
+            </div>
+            <div class="menu-hamburguesa" onclick="toggleMenu()">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <main class="bg-contactanos">
+
+        
+        {% if msg %}
+            <p class="msg" id="msg">{{ msg }}</p>
+            <script>
+                // Script para ocultar el mensaje después de 2 segundos
+                document.addEventListener("DOMContentLoaded", function() {
+                    setTimeout(function() {
+                        document.getElementById("msg").style.display = "none";
+                    }, 2000);
+                });
+            </script>
+        {% endif %}
+
+
+        <div class="flex-box">
+            <div class="form-contact">
+                <div class="info-contactanos">
+                    <h2>"Comunícate con <span>Nosotros"</span></h2>
+                <p>Te atendemos las 24 horas. Haz tus trámites y consultas sin salir de casa. +51 913 478 798.
+                </p>
+            </div>
+
+
+            <form class="form-contactanos" action="{{ url_for('registrarForm')}}" method="post">
+                <input type="text" placeholder="Nombre De Contacto" name="nombredecontacto" required>
+                <input type="text" placeholder="Calle" name="calle" required>
+                
+                <div class="city">
+                    <input type="text" placeholder="Ciudad" name="ciudad" required>
+                    <input type="text" placeholder="Postcode" name="postcode" required>
+                </div>
+            
+                <input type="tel" placeholder="Numero De Contacto" name="telefono" required>
+                <input type="email" placeholder="E-mail" name="email" required>
+                <input type="text" placeholder="Escribe tu mensaje" name="mensaje" required>
+            
+                <div class="checkbox-contactanos">
+                    <input type="checkbox" name="nda" id="nda" required>
+                    <label for="nda">Quiero proteger mis datos firmando un NDA</label>
+                </div>
+            
+                <button type="submit" class="boton-contactanos">ENVIAR</button>
+            </form>
+            
+
+            </div>
+
+                <div class="photo"></div>
+
+
+        </div>
+
+    </main>
+
+    <footer class="pie-ct">
+
+        <div class="footer">
+            <div class="logo">
+                <h3>Travel go</h3>
+                <p>Reserva tu viaje en minutos, llena
+                    Controla por mucho más tiempo.</p>
+            </div>
+    
+            <div class="footer-navegacion">
+                <div class="ft">
+                    <h2>Compañia</h2>
+                    <a href="{{ url_for('registrarForm') }}">Acerca De</a>
+                    <a href="#">Mobile</a>
+                  </div>
+      
+                  <div class="ft">
+                    <h2>Nosotros</h2>
+                    <a href="{{ url_for('blog') }}">blog</a>
+                    <a href="{{ url_for('registrarForm') }}">Afiliados</a>
+                  </div>
+      
+                  <div class="ft">
+                        <h2>Mas</h2>
+                        <a href="{{ url_for('inicio') }}">inicio</a>
+                        <a href="{{ url_for('blog') }}">Consejos para tarifas bajas</a>
+                  </div>
+            </div>
+
+            
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/facebook.png') }}"></a>
+                <a href="https://www.instagram.com/travellerr_2/"><img src="{{ url_for('static', filename='web/img/instagram.png') }}"></a>
+
+                <p>Descubre nuestra App</p>
+
+                <a class="app" href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/GooglePlay.png') }}"></a>
+                <a class="app" href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/PlayStore.png') }}"></a>
+            </div>
+        </div>
+        
+
+        <div class="reservado">
+            <p>Derechos reservados reserved@travelgoo.com</p>
+        </div>
+    </footer>
+</body>
+
+<script src="{{ url_for('static', filename='web/js/navBar.js') }}" class="apps"></script>
+<script src="{{ url_for('static', filename='web/js/main.js') }}" class="apps"></script>
+<script src="{{ url_for('static', filename='web/js/conexionbd.js') }}" class="apps"></script>
+
+
+</html>

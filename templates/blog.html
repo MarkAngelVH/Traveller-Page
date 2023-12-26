@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Traveller Blog</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='web/img/logo.png') }}" rel="icon">
+  <!-- Libraries & Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='web/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='web/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="titulo">
+                <h2>Travel Go</h2>
+            </div>
+            <div class="navegacion">
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('registrarForm') }}">Contactanos</a>
+                <a href="{{ url_for('blog') }}">Blog</a>
+            </div>
+            <div class="menu-hamburguesa" onclick="toggleMenu()">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+        </div>
+    </header>
+    
+
+    <main class="menu-blog">
+        <div class="bg-blog"></div>
+
+        <div class="titulo-flotante-blog">
+            <h2>Tu imaginación es tu único límite</h2>
+            <p>Desde empacar de manera inteligente hasta encontrar los lugares locales más auténticos, compartimos nuestros mejores 
+            consejos para hacer que cada viaje sea inolvidable. ¡Prepárate para mejorar tus habilidades de viaje!</p>
+        </div>
+
+
+        <aside>
+            <div class="menu-videos">
+                <div class="nosotros-blog">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Bienvenido al viaje de un marinero solitario que explora el mundo en barco. Este blog de viajes documenta las aventuras,
+                    experiencias y conocimientos de un marinero apasionado mientras navega por mar abierto y descubre nuevos horizontes.</p>
+                        <button class="boton-blog" type="submit">Ver mis videos</button>
+                    </div>
+    
+                <div class="caja-videosBlog">
+                    <div class="videos-blog">
+                        <div class="gp-video">
+                            <video autoplay loop muted playsinline>
+                            <source src="{{ url_for('static', filename='videos/buddha_-_73752 (1080p).mp4') }}" type="video/mp4">
+                            </video>
+                            <h4>Estatua Buddha</h4>
+                            <p>Lugar Espiritual</p>
+                        </div>
+
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/waterfall_-_37088 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Cascada</h4>
+                            <p>Un espectaculo Natural</p>
+                        </div>
+    
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/cornwall_-_4798 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Cornualles</h4>
+                            <p>Playas majestuosas</p>
+                        </div>
+    
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/hohenzollern_-_33332 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Hohenzollern</h4>
+                            <p>Dinastía real alemana</p>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="videos-blog">
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/mosque_-_63572 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Mezquita</h4>
+                            <p>Lugar de Fe Islamica</p>
+                        </div>
+    
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/mountain_-_34608 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Mountaña</h4>
+                            <p>Isla Ascensión en el Atlántico</p>
+                        </div>
+    
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/rhine_falls_-_32516 (1080p).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>Cataratas del Rin</h4>
+                            <p>El mayor salto de agua en la Europa</p>
+                        </div>
+
+                        <div class="gp-video">
+                                <video autoplay loop muted playsinline>
+                                <source src="{{ url_for('static', filename='videos/sunrise_-_83880 (Original).mp4') }}" type="video/mp4">
+                                </video>
+                            <h4>El amanecer</h4>
+                            <p>Mejores amaneceres del mundo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="sub-lugares">
+            <h2>Cada experiencia tiene una riqueza escondida ¡Encuéntrala!</h2>
+        </div>
+
+
+        <div class="lugares">
+            <div class="seccion1-blog">
+                <h2>Himalayas</h2>
+                <hr>
+                <p>El Himalaya, o Himalaya, es una cadena montañosa de Asia que separa las llanuras del subcontinente indio de la meseta tibetana. La cordillera tiene algunos de los picos más altos del planeta,
+                    incluido el más alto, el Monte Everest. En el Himalaya se encuentran más de 100 picos que superan los 7.200 m de altura.</p>
+            </div>
+        
+            <div class="fotosblog" id="fotosContainer">
+                <img src="{{ url_for('static', filename='web/img/blog-lugares.png') }}">
+                <img src="{{ url_for('static', filename='web/img/blog-lugares2.png') }}">
+                <img src="{{ url_for('static', filename='web/img/blog-lugares3.png') }}">
+            </div>
+        </div>
+    </main>
+   
+
+    <footer>
+
+        <div class="footer">
+            <div class="logo">
+                <h3>Travel go</h3>
+                <p>Reserva tu viaje en minutos, llena
+                    Controla por mucho más tiempo.</p>
+            </div>
+    
+            <div class="footer-navegacion">
+                <div class="ft">
+                    <h2>Compañia</h2>
+                    <a href="{{ url_for('registrarForm') }}">Acerca De</a>
+                    <a href="#">Mobile</a>
+                  </div>
+      
+                  <div class="ft">
+                    <h2>Nosotros</h2>
+                    <a href="{{ url_for('blog') }}">blog</a>
+                    <a href="{{ url_for('registrarForm') }}">Afiliados</a>
+                  </div>
+      
+                  <div class="ft">
+                        <h2>Mas</h2>
+                        <a href="{{ url_for('inicio') }}">inicio</a>
+                        <a href="{{ url_for('blog') }}">Consejos para tarifas bajas</a>
+                  </div>
+            </div>
+
+            
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/facebook.png') }}"></a>
+                <a href="https://www.instagram.com/travellerr_2/"><img src="{{ url_for('static', filename='web/img/instagram.png') }}"></a>
+
+                <p>Descubre nuestra App</p>
+
+                <a class="app" href="https://www.facebook.com/profile.php?id=61554761814203"><img class="apps" src="{{ url_for('static', filename='web/img/GooglePlay.png') }}"></a>
+                <a class="app" href="https://www.facebook.com/profile.php?id=61554761814203"><img class="apps" src="{{ url_for('static', filename='web/img/PlayStore.png') }}"></a>
+            </div>
+        </div>
+        
+
+        <div class="reservado">
+            <p>All rights reserved@travelgoo.com</p>
+        </div>
+    </footer>
+</body>
+
+<script src="{{ url_for('static', filename='web/js/navBar.js') }}"></script>
+<script src="{{ url_for('static', filename='web/js/main.js') }}"></script>
+
+</html>

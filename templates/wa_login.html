@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Appunto Web Admin</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='web/img/logo_appunto.png') }}" rel="icon">
+  <!-- Libraries & Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='web/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='web/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <!--==========================
+    Section Body
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
+        <form action="/wa_login" method="POST" enctype="multipart/form-data">
+          {% if error == "1" %}  
+            <div class="alert alert-danger" role="alert">
+              Usuario y/o Password incorrecto!
+            </div>
+          {% endif %}
+            <div class="card-header">
+                Iniciar Sesión en  <strong>APPUNTO</strong> Web Admin
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="idTxtUsusario">Usuario :</label>
+              <input type="text" class="form-control" id="idTxtUsusario" name="idTxtUsusario" aria-describedby="userlHelp" required>
+              <small id="userlHelp" class="form-text text-muted">No comparta estos datos con nadie.</small>
+            </div>
+            <div class="form-group">
+              <label for="idTxtPassword">Password :</label>
+              <input type="password" class="form-control" id="idTxtPassword" name="idTxtPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acceder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            <a class="btn btn-dark">Cambiar Contraseña</a>  
+        </form>
+    </div>
+  </section><!-- #intro -->
+
+
+  <!-- JavaScript Libraries -->
+
+</body>
+</html>

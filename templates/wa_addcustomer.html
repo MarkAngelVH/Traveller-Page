@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Registro de Viaje</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='web/img/logo_appunto.png') }}" rel="icon">
+  <!-- Libraries & Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='web/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='web/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      <div class="nav">
+          <div class="titulo">
+              <h2>Traveller</h2>
+          </div>
+          <div class="navegacion">
+              <a href="/inicio.html">Inicio</a>
+              <a href="/contactanos.html">Contactanos</a>
+              <a href="/blog.html">Blog</a>
+          </div>
+          <div class="menu-hamburguesa" onclick="toggleMenu()">
+              <div class="barra"></div>
+              <div class="barra"></div>
+              <div class="barra"></div>
+          </div>
+      </div>
+    </header>
+
+  <!--==========================
+    Section Body
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
+        <form action="/wa_addcustomer" method="POST" enctype="multipart/form-data">
+            <div class="card-header">
+                REGISTRO DE CUSTOMER
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="idTxtUsusario">FullName :</label>
+              <input type="text" class="form-control" id="idTxtFullName" name="idTxtFullName" aria-describedby="userlHelp" required>
+            </div>
+            <div class="form-group">
+              <label for="idTxtPassword">Cod :</label>
+              <input type="text" class="form-control" id="idTxtCod" name="idTxtCod" required>
+            </div>
+            <button type="submit" class="btn btn-primary">GUARDAR</button>
+        </form>
+    </div>
+  </section><!-- #intro -->
+
+    <footer>
+
+      <div class="footer">
+          <div class="logo">
+              <h3>Travel go</h3>
+              <p>Reserva tu viaje en minutos, llena
+                  Controla por mucho más tiempo.</p>
+          </div>
+
+          <div class="footer-navegacion">
+              <div class="ft">
+                  <h2>compañia</h2>
+                  <a href="#">Acerca de</a>
+                  <a href="#">Mobile</a>
+              </div>
+
+              <div class="ft">
+                  <h2>Contactanos</h2>
+                  <a href="#">Ayuda/FAQ</a>
+                  <a href="#">Afiliados</a>
+              </div>
+
+              <div class="ft">
+                  <h2>More</h2>
+                  <a href="#">Aerolinea</a>
+                  <a href="#">Consejos para tarifas bajas</a>
+              </div>
+          </div>
+
+          
+          <div class="redes-footer">
+                <a href="#"><img src="{{ url_for('static', filename='web/img/facebook.png') }}"></a>
+                <a href="#"><img src="{{ url_for('static', filename='web/img/instagram.png') }}"></a>
+
+                <p>Descubre nuestra App</p>
+
+                <a class="app" href="#"><img src="{{ url_for('static', filename='web/img/GooglePlay.png') }}"></a>
+                <a class="app" href="#"><img src="{{ url_for('static', filename='web/img/PlayStore.png') }}"></a>
+          </div>
+      </div>
+      
+
+      <div class="reservado">
+          <p>All rights reserved@travelgoo.com</p>
+      </div>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+
+</body>
+</html>

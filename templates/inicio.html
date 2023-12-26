@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Traveller Inicio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='web/img/logo.png') }}" rel="icon">
+  <!-- Libraries & Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='web/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='web/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+      <div class="nav">
+          <div class="titulo">
+              <h2>Travel Go</h2>
+          </div>
+
+          <div class="navegacion">
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('registrarForm') }}">Contactanos</a>
+            <a href="{{ url_for('blog') }}">Blog</a>
+        </div>
+          <div class="menu-hamburguesa" onclick="toggleMenu()">
+              <div class="barra"></div>
+              <div class="barra"></div>
+              <div class="barra"></div>
+          </div>
+      </div>
+  </header>
+  
+  <div class="bg-main">
+      <div class="titulo-flotante">
+          <h1>"Desatate en una Aventura"</h1>
+          <p>"Explora los confines de la creatividad y haz realidad tus ideas más audaces en nuestra plataforma. Descubre un mundo donde la innovación y la originalidad son la norma, y donde cada clic te lleva a nuevas posibilidades. 
+              ¡Únete a nosotros y haz que tu visión cobre vida más allá de tus límites imaginativos!"</p>
+          <a href="#" class="boton-titulo">Descubrir más</a>
+      </div>
+  </div>
+
+<main>
+
+    <div class="servicios">
+            <h2>Nuestros Servicios</h2>
+        <div class="bg-servicios">
+
+            <div class="card-servicios">
+                <img src="{{ url_for('static', filename='web/img/ticket.png') }}" alt="Ticket Image">
+
+                <h3>reserva de billetes</h3>
+                    <p>Reservamos todo tipo de billetes nacionales o internacionales.
+                        para tu destino</p>
+                </div>
+
+                <div class="card-servicios">
+                <img src="{{ url_for('static', filename='web/img/hotel.png') }}" alt="hotel Image">
+                    <h3>Reserva de hotel</h3>
+                    <p>Puedes reservar fácilmente tu según tu
+                    hotel económico por nuestro sitio web.</p>
+            </div>
+  
+            <div class="card-servicios">
+                <img src="{{ url_for('static', filename='web/img/plane.png') }}" alt="plane Image">
+                <h3>Plan de viaje</h3>
+                <p>Te ofrecemos el mejor plan en poco tiempo.
+                    tiempo explorar más.</p>
+              </div>
+          </div>
+      </div>
+      
+      <video class="video-br" height="600px" width="100%" autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='videos/video-br.mp4') }}" type="video/mp4">
+      </video>
+      
+      
+
+
+      <div class="servicio-map">
+          <div class="mid">
+              <h2>Siempre tratamos de darte el mejor servicio.</h2>
+              <p>Siempre tratamos de hacer feliz a nuestro cliente. Ofrecemos todo tipo de
+                  instalaciones. Su satisfacción es nuestra principal prioridad.</p>
+          </div>
+
+          <div class="services-img">
+              <div class="bg-services">
+                <img src="{{ url_for('static', filename='web/img/calendar.png') }}" alt="calendario">
+                  <h2>10+</h2>
+                  <p>Años de Experiencia</p>
+              </div>
+  
+              <div class="bg-services">
+                <img src="{{ url_for('static', filename='web/img/ant-design.png') }}" alt="antdesign">
+                <h2>15k+</h2>
+                  <p>Viajeros Felices</p>
+              </div>
+  
+              <div class="bg-services">
+                <img src="{{ url_for('static', filename='web/img/map.png') }}" alt="map">
+                <h2>650+</h2>
+                  <p>Lugares visitados</p>
+              </div>
+  
+              <div class="bg-services">
+                <img src="{{ url_for('static', filename='web/img/history.png') }}" alt="history">
+                <h2>2k+</h2>
+                  <p>Historias de viajes</p>
+              </div>
+          </div>
+      </div>
+
+      
+
+      <div class="destinos">
+          <h3>Nuestros Destinos Mas Populares</h3>
+
+          <div class="box-explore">
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore1.png') }}" alt="explore1">
+                <h4>Venecia</h4>
+                  <p>Venecia, la capital de la región de Véneto en el norte de Italia, 
+                      abarca más de 100 islas pequeñas en una laguna del mar Adriático. 
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore2.png') }}" alt="explore2">
+                  <h4>Playa Golorit </h4>
+                  <p>Cala Goloritzé es una playa que se encuentra en la localidad de Baunei, en la parte sur
+                      del Golfo de Orosei, en Ogliastra, Cerdeña. 
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore3.png') }}" alt="explore3">
+                  <h4>Monte Everest</h4>
+                  <p>El monte Everest o Éverest es la montaña más alta de la superficie del planeta Tierra, 
+                       con una altitud de 8848.86 metros sobre el nivel del mar.
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+          </div>
+
+          <div class="box-explore">
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore4.png') }}" alt="explore4">
+                  <h4>Faro Les Éclaireurs  </h4>
+                  <p>Les Éclaireurs es un faro emplazado en el islote NE del conjunto de islotes Les Éclaireurs en el canal Beagle, frente
+                      a las costas de la bahía de Ushuaia, en Tierra del Fuego, Argentina.
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore5.png') }}" alt="explore5">
+                  <h4>Cueva Abandonada</h4>
+                  <p>El turismo industrial está de moda. Cientos de minas abandonadas reabren
+                      con un nuevo uso vinculado con el ocio y la cultura.
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+
+              <div class="explore-card">
+                <img src="{{ url_for('static', filename='web/img/explore6.png') }}" alt="explore1">
+                  <h4>Catedral de Brasilia </h4>
+                  <p>La Catedral Metropolitana Nossa Senhora Aparecida, más conocida como la Catedral de Brasilia es la catedral
+                      metropolitana de Brasilia, capital de República Federal de Brasil.
+                      </p>
+                      <div class="link-card">
+                          <a href="#">Solo travel</a>
+                          <p>By Mark Angel</p>
+                      </div>                        
+              </div>
+          </div>  
+      </div>
+
+
+      <aside>
+          <div class="packages">
+              <h4 class="subtitulo-packages">Los mejores paquetes para ti</h4>
+
+              <div class="opciones-packages">
+                  <button class="boton-packages" onclick="mostrarDescripcion('hot-deals')">Hot deals</button>
+                  <button class="boton-packages" onclick="mostrarDescripcion('backpack')">Backpack</button>
+                  <button class="boton-packages" onclick="mostrarDescripcion('south-asia')">Aventuras</button>
+                  <button class="boton-packages" onclick="mostrarDescripcion('honeymoon')">Honeymoon</button>
+                  <button class="boton-packages" onclick="mostrarDescripcion('europe')">Oferta Destacada</button>
+              </div>
+          
+              <div class="descripcion-packages" id="descripcion-hot-deals">
+                  <div class="box-packages">
+                  <div class="packages-card">
+                <img src="{{ url_for('static', filename='web/img/packages1.jpg') }}">
+                    <div class="text-packages">
+                          <div class="precio">
+                              <h4>3 Dias, 2 Noches</h4>
+                              <p>$500 / Person</p>
+                          </div>
+                          <p>Explora la Belleza de el Puente Farol durante 3 días y 2 noches con nuestra agencia de viajes
+                          </p> 
+                           <div class="mapa">
+                              <a href="">ver mas</a>
+                              
+                              <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">
+                                España</p>
+                           </div>
+                      </div>                   
+                  </div>
+  
+                  <div class="packages-card">
+                <img src="{{ url_for('static', filename='web/img/packages9.png') }}">
+                      <div class="text-packages">
+                          <div class="precio">
+                            <h4>3 Dias, 2 Noches</h4>
+                            <p>$500 / Person</p>
+                          </div>
+                          <p>Explora la Belleza de la isla durante 3 días y 2 noches con nuestra agencia de viajes
+                          </p> 
+                           <div class="mapa">
+                              <a href="">ver mas</a>
+                              
+                              <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Isla</p>
+                           </div>
+                      </div>                      
+                  </div>
+  
+                  <div class="packages-card">
+                <img src="{{ url_for('static', filename='web/img/packages6.jpg') }}">
+                      <div class="text-packages">
+                          <div class="precio">
+                            <h4>3 Dias, 2 Noches</h4>
+                            <p>$500 / Person</p>
+                          </div>
+                          <p>Explora la Belleza de Torre Eiffel durante 3 días y 2 noches con nuestra agencia de viajes
+                          </p> 
+                           <div class="mapa">
+                              <a href="">ver mas</a>
+                              
+                              <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Francia</p>
+                           </div>
+                      </div>                        
+                  </div>
+              </div> 
+              </div>
+          
+              <div class="descripcion-packages" id="descripcion-backpack">
+                  <div class="box-packages">
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages10.jpg') }}">
+                        <div class="text-packages">
+                              <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de el gran cañon durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">EE.UU</p>
+                               </div>
+                          </div>                   
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages12.jpg') }}">
+                        <div class="text-packages">
+                              <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de Roma durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  <p class="parrafo-packages">
+                                    <img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Roma</p>
+                               </div>
+                          </div>                      
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages15.jpg') }}">
+                        <div class="text-packages">
+                              <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de la cueva durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Francia</p>
+                               </div>
+                          </div>                        
+                      </div>
+                  </div>
+              </div>
+
+              <div class="descripcion-packages" id="descripcion-south-asia">
+                  <div class="box-packages">
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages12.jpg') }}">
+                        <div class="text-packages">
+                              <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza del roma durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">EE.UU</p>
+                               </div>
+                          </div>                   
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages1.jpg') }}">
+                        <div class="text-packages">
+                              <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de el puente Monumental durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Grecia</p>
+                               </div>
+                          </div>                      
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages9.png') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de la isla durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Indionesia</p>
+                               </div>
+                          </div>                        
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="descripcion-packages" id="descripcion-honeymoon">
+                  <div class="box-packages">
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages11.jpg') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de la muralla china durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">China</p>
+                               </div>
+                          </div>                   
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages8.jpg') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de Roma durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Roma</p>
+                               </div>
+                          </div>                      
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages4.jpg') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza del coliseo durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Indionesia</p>
+                               </div>
+                          </div>                        
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="descripcion-packages" id="descripcion-europe">
+                  <div class="box-packages">
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages1.jpg') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza del puente Time durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Ucrania</p>
+                               </div>
+                          </div>                   
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages2.png') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza de venecia durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Italia</p>
+                               </div>
+                          </div>                      
+                      </div>
+      
+                      <div class="packages-card">
+                        <img src="{{ url_for('static', filename='web/img/packages3.png') }}">
+                        <div class="text-packages">
+                            <div class="precio">
+                                <h4>3 Dias, 2 Noches</h4>
+                                <p>$500 / Person</p>
+                              </div>
+                              <p>Explora la Belleza del bosque durante 3 días y 2 noches con nuestra agencia de viajes
+                              </p> 
+                               <div class="mapa">
+                                  <a href="">ver mas</a>
+                                  
+                                  <p class="parrafo-packages"><img src="{{ url_for('static', filename='web/img/map-packages.png') }}">Islandia</p>
+                               </div>
+                          </div>                        
+                      </div>
+                  </div>
+              </div>
+      </div>
+      </aside>
+
+      <div class="book">
+          <h4>Reserva tu próximo viaje en 3 sencillos pasos</h4>
+          <p>Rapido y Facil</p>
+          <div class="info-books">
+              <div class="steps">
+                  <div class="choose">
+                    <img src="{{ url_for('static', filename='web/img/1step.png') }}">
+                    <div class="text-step">
+                          <h5>Elige destino</h5>
+                      <p>Elige Tu Destino, somos agencia de viajes digital donde encontraras
+                          las mejores ofertas en hoteles.</p>
+                      </div>
+                  </div>
+  
+                  <div class="make">
+                    <img src="{{ url_for('static', filename='web/img/2step.png') }}">
+                      <div class="text-step">
+                          <h5>Hacer el pago</h5>
+                      <p>Dónde puedes realizar pagos sin contacto. Puedes pagar  
+                          donde quiera que se admitan pagos.</p>
+                      </div>
+                  </div>
+  
+                  <div class="rearch">
+                    <img src="{{ url_for('static', filename='web/img/3step.png') }}">
+                      <div class="text-step">
+                          <h5>Buscar en el aeropuerto en la fecha seleccionada</h5>
+                      <p>Ingresa el aeropuerto de salida y las fechas de viaje, luego selecciona 'Cualquier lugar'.</p>
+                      </div>
+                  </div>
+              </div>
+              
+
+              <div class="book-card">
+                  <img src="/static/web/img/img-step.jpg" alt="">
+                  <h5>viaje a grecia</h5>
+                  <p>14-15 june | by MARK</p>
+                  
+                  <div class="icons-card">
+                    <img src="{{ url_for('static', filename='web/img/icon-step.png') }}">
+                    <img src="{{ url_for('static', filename='web/img/icon-step2.png') }}">
+                    <img src="{{ url_for('static', filename='web/img/icon-step3.png') }}">
+                  </div>
+  
+                  <div class="people-card">
+                    <img src="{{ url_for('static', filename='web/img/arquitecto.png') }}">
+                      <p>24 personas iran</p>
+                  </div>
+  
+              </div>
+          </div>
+
+          
+      </div>
+
+
+  <div class="caja-suscrito">
+      <div class="subscribe">
+          <p>Suscríbete para recibir información, últimas noticias y otras ofertas interesantes sobre Traveller</p>
+              <form action="#">
+                  <input id="email" class="icono-placeholder" type="email" name="email" placeholder=" Tu email">
+                  <button class="subscribe-boton">Suscribirse</button>
+              </form>
+      </div>
+  </div>
+      
+  </main>
+
+  <footer>
+
+      <div class="footer">
+          <div class="logo">
+              <h3>Travel go</h3>
+              <p>Reserva tu viaje en minutos, llena
+                  Controla por mucho más tiempo.</p>
+          </div>
+  
+          <div class="footer-navegacion">
+            <div class="ft">
+                <h2>Compañia</h2>
+                <a href="{{ url_for('registrarForm') }}">Acerca De</a>
+                <a href="#">Mobile</a>
+              </div>
+  
+              <div class="ft">
+                <h2>Nosotros</h2>
+                <a href="{{ url_for('blog') }}">blog</a>
+                <a href="{{ url_for('registrarForm') }}">Afiliados</a>
+              </div>
+  
+              <div class="ft">
+                    <h2>Mas</h2>
+                    <a href="{{ url_for('inicio') }}">inicio</a>
+                    <a href="{{ url_for('blog') }}">Consejos para tarifas bajas</a>
+              </div>
+          </div>
+
+          
+          <div class="redes-footer">
+                <a href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/facebook.png') }}"></a>
+                <a href="https://www.instagram.com/travellerr_2/"><img src="{{ url_for('static', filename='web/img/instagram.png') }}"></a>
+
+                <p>Descubre nuestra App</p>
+
+                <a class="apps" href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/GooglePlay.png') }}"></a>
+                <a class="apps" href="https://www.facebook.com/profile.php?id=61554761814203"><img src="{{ url_for('static', filename='web/img/PlayStore.png') }}"></a>
+          </div>
+      </div>
+      
+
+      <div class="reservado">
+          <p>All rights reserved@travelgoo.com</p>
+      </div>
+  </footer>
+
+  
+</body>
+    <script src="{{ url_for('static', filename='web/js/navBar.js') }}"></script>
+    <script src="{{ url_for('static', filename='web/js/botones-paquetes.js') }}"></script>
+    <script src="{{ url_for('static', filename='web/js/main.js') }}"></script>
+
+
+</html>
